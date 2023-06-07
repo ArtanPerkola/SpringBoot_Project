@@ -51,4 +51,12 @@ public class Comment {
     public Post getPost() {
         return post;
     }
+
+    public void setText(String textContent) {
+        this.textContent = textContent;
+    }
+
+    public void setAuthor(User user) {
+        this.user = user;
+    }
 }

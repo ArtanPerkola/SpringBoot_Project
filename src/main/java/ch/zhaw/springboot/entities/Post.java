@@ -49,4 +49,13 @@ public class Post {
     public User getUser() {
         return user;
     }
+
+    public void setTextContent(String textContent) {
+        this.textContent = textContent;
+    
+    }
+
+    public void setImageContent(String imageContent) {
+        this.imageContent = imageContent;
+    }
 }
