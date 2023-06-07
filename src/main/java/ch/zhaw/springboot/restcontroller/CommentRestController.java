@@ -46,13 +46,14 @@ public class CommentRestController {
     public ResponseEntity<Comment> createComment(@RequestBody Comment comment) {
         // Save the comment in the repository
         Comment createdComment = repository.save(comment);
-    
+
         // Return the created comment with HTTP status CREATED
         return new ResponseEntity<>(createdComment, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "comments/{commentId}", method = RequestMethod.PUT)
-    public ResponseEntity<Comment> updateComment(@PathVariable("commentId") long commentId, @RequestBody Comment updatedComment) {
+    public ResponseEntity<Comment> updateComment(@PathVariable("commentId") long commentId,
+            @RequestBody Comment updatedComment) {
         // Retrieve the comment to be updated
         Comment existingComment = repository.findCommentById(commentId);
 
@@ -88,6 +89,5 @@ public class CommentRestController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
 
 }
