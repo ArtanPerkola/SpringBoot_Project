@@ -4,12 +4,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import ch.zhaw.springboot.entities.User;
+import ch.zhaw.springboot.entities.Ownership;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface OwnershipRepository extends JpaRepository<Ownership, Integer> {
 
-    @Query("SELECT e FROM Employee e WHERE e.id = ?1")
-    User findById(int id);
-
+    @Query("SELECT o FROM Ownership o WHERE o.id = ?1")
+    Ownership findById(int id);
 }

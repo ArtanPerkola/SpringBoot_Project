@@ -10,54 +10,36 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
-    private String username;
-    private String password;
-    private String email;
-    private String profilePicture;
-    private String bio;
+    private String name;
+    private String position;
 
-    public User(String username, String password, String email, String profilePicture, String bio) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.profilePicture = profilePicture;
-        this.bio = bio;
+    public User(String name, String position) {
+        this.name = name;
+        this.position = position;
     }
 
     public User() {
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPosition() {
+        return position;
     }
 
-    public String getEmail() {
-        return email;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getProfilePicture() {
-        return profilePicture;
-    }
-
-    public String getBio() {
-        return bio;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPosition(String position) {
+        this.position = position;
     }
 }

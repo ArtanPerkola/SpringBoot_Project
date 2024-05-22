@@ -1,5 +1,0 @@
-Ali Cem Güler, Joel Egli and Samuel Jucker
-
-1. Domain Model: Our model includes five entities (5 db tables, 7 java entities) with many-to-many relationships and usage of a composite primary key in the Followers and FriendRequests entity.
-2. Repositories: Our repositories include different domain specific select queries. Additionally we have implemented insert, update and delete queries. This enables a wider variety of operations in the database.
-3. Controllers: Our controllers include additional endpoints and methods like GET, POST, PUT, DELETE providing more functionality to our frontend.

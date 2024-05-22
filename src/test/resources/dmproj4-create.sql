@@ -1,5 +1,5 @@
-CREATE DATABASE dmproj4;
-USE dmproj4;
+CREATE DATABASE dmprojexam;
+USE dmprojexam;
 
 CREATE TABLE Users (
     id INT AUTO_INCREMENT PRIMARY KEY,
